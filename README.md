@@ -1,4 +1,4 @@
-# adhash-ecommerce-web
+# ecommerce-poc-be
 
 ## backend readme
 
@@ -33,8 +33,8 @@ A simple backend REST API for managing e-commerce products, built with **Node.js
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yukisedhu73/adhash-ecommerce-web.git
-cd adhash-ecommerce-web/backend
+git clone https://github.com/yukisedhu73/ecommerece-poc-be.git
+cd ecommerece-poc-be
 ```
 
 ### 2. Install dependencies:
