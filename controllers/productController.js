@@ -2,7 +2,7 @@ const pool = require("../db");
 
 exports.getAllProducts = async (req, res) => {
   try {
-    const result = await pool.query("SELECT * FROM products ORDER BY created_at DESC");
+    const result = await pool.query("SELECT * FROM products ORDER BY id DESC");
     res.json(result.rows);
   } catch (error) {
     console.error("Error in getAllProducts:", error);
@@ -13,7 +13,9 @@ exports.getAllProducts = async (req, res) => {
 exports.getProductById = async (req, res) => {
   try {
     const { id } = req.params;
-    const result = await pool.query("SELECT * FROM products WHERE id = $1", [id]);
+    const result = await pool.query("SELECT * FROM products WHERE id = $1", [
+      id,
+    ]);
     if (result.rows.length === 0)
       return res.status(404).json({ message: "Product not found" });
     res.json(result.rows[0]);
