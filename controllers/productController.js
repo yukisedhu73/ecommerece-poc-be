@@ -2,7 +2,7 @@ const pool = require("../db");
 
 exports.getAllProducts = async (req, res) => {
   try {
-    const result = await pool.query("SELECT * FROM products");
+    const result = await pool.query("SELECT * FROM products ORDER BY created_at DESC");
     res.json(result.rows);
   } catch (error) {
     console.error("Error in getAllProducts:", error);

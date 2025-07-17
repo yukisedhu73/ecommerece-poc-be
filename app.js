@@ -7,7 +7,7 @@ const productRoutes = require("./routes/productRoutes");
 
 const allowedOrigins = [
   "http://localhost:4200",
-  "https://your-fe-deployed-url.com",
+  "https://ecommerece-poc-fe.vercel.app",
 ];
 
 app.use(
